@@ -12,7 +12,7 @@ export default function About() {
           </div>
         </div>
         <p className="text-sm/6 text-slate-300 md:text-base">
-          Hi, I’m Yo, Nuttapong Khampoopen. I graduated in Software
+          Hi, {"I’m"} Yo, Nuttapong Khampoopen. I graduated in Software
           Engineering from Mae Fah Luang University. I learn fast, think
           critically, and always hunt for better solutions. I’m passionate
           about building systems that work in the real world, and I believe
