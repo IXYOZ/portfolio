@@ -21,14 +21,14 @@ export default function Projects(){
           name: "V-booking",
           desc: "Vaccination booking with OTP.",
           tech: ["Next.js", "Prisma", "OTP"],
-          demo: "#",
+          demo: "",
           code: "https://github.com/IXYOZ/vaccine-booking.git",
         },
         {
           name: "CheersDo",
           desc: "Priority-based to-do with points and E-mail reminders.",
           tech: ["Next.js", "Prisma", "Tailwind", "8n8", "Docker"],
-          demo: "#",
+          demo: "",
           code: "https://github.com/IXYOZ/CheersDo.git",
         },
         {
@@ -41,22 +41,22 @@ export default function Projects(){
             "Crystal Reports",
             "Oracle",
           ],
-          demo: "#",
-          code: "#",
+          demo: "",
+          code: "",
         },
         {
           name: "YK (Yaowarat krungthep gold group) gold inventory&delivery",
           desc: "Manages inventory and delivery gold&stuff to front shop 200+ branches in thailand.",
           tech: ["VB.net", "MySQL", "Crystal Reports"],
-          demo: "#",
-          code: "#",
+          demo: "",
+          code: "",
         },
         {
           name: "Flexserv (WIP)",
           desc: "Service platform concept that solve all problems for SME - in progress.",
           tech: ["Next.js", "Node.js"],
-          demo: "#",
-          code: "#",
+          demo: "",
+          code: "",
         },
       ].map((p) => (
         <article
@@ -78,18 +78,22 @@ export default function Projects(){
           </div>
           <p className="mt-2 text-sm text-white/70">{p.desc}</p>
           <div className="mt-4 flex gap-3">
-            <a
+            {p.demo && (<a
               href={p.demo}
               className="rounded-xl border border-white/15 px-3 py-1.5 text-sm hover:bg-white/10"
             >
               Live
             </a>
-            <a
+          )}
+            {p.code && (
+              <a
               href={p.code}
               className="rounded-xl border border-white/15 px-3 py-1.5 text-sm hover:bg-white/10"
             >
               Code
             </a>
+            )}
+            
           </div>
         </article>
       ))}

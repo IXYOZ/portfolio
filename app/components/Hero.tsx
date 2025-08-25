@@ -29,6 +29,7 @@ export default function Hero(){
     <div className="flex flex-wrap items-center justify-center gap-3">
       <a
         href="Resume_Nuttapong_Khampoopen_2025_JuniorDev.pdf"
+        download
         className="rounded-2xl bg-white px-4 py-2 text-sm font-medium text-slate-900 shadow hover:shadow-lg"
       >
         Download CV
