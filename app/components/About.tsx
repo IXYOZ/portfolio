@@ -17,7 +17,7 @@ export default function About() {
           critically, and always hunt for better solutions. I’m passionate
           about building systems that work in the real world, and I believe
           every problem has a shorter, smarter way to solve it. I constantly
-          challenge myself to improve and grow.
+          challenge myself to improve and grow never give up.
         </p>
       </div>
     </section>

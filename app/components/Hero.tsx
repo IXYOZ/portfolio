@@ -23,7 +23,7 @@ export default function Hero(){
       </span>
     </motion.h1>
     <p className="max-w-2xl text-pretty text-sm/6 text-slate-300 md:text-base/7">
-      To solving problem do it more and more.
+      To solving problems, face them & do more.
     </p>
 
     <div className="flex flex-wrap items-center justify-center gap-3">
