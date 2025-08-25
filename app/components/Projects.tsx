@@ -80,6 +80,8 @@ export default function Projects(){
           <div className="mt-4 flex gap-3">
             {p.demo && (<a
               href={p.demo}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-xl border border-white/15 px-3 py-1.5 text-sm hover:bg-white/10"
             >
               Live
@@ -88,6 +90,8 @@ export default function Projects(){
             {p.code && (
               <a
               href={p.code}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-xl border border-white/15 px-3 py-1.5 text-sm hover:bg-white/10"
             >
               Code
