@@ -4,7 +4,7 @@ export default function Skills(){
 
     return <section
     id="skills"
-    className="mx-auto items-center max-w-6xl px-4 py-16 "
+    className="mx-auto items-center max-w-6xl px-4 py-16 animate-fadeIn"
   >
     <h2 className="text-2xl font-semibold tracking-tight md:text-3xl text-center">
       Skills

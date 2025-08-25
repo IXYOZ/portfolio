@@ -1,8 +1,77 @@
 'use client'
 
+import { useEffect, useRef } from "react"
+
 export default function Projects(){
 
-    return <section id="projects" className="mx-auto max-w-6xl px-4 py-16">
+    const projects = [
+      {
+        name: "V-booking",
+        desc: "Vaccination booking with OTP.",
+        tech: ["Next.js", "Prisma", "OTP"],
+        demo: "",
+        code: "https://github.com/IXYOZ/vaccine-booking.git",
+      },
+      {
+        name: "CheersDo",
+        desc: "Priority-based to-do with points and E-mail reminders.",
+        tech: ["Next.js", "Prisma", "Tailwind", "8n8", "Docker"],
+        demo: "",
+        code: "https://github.com/IXYOZ/CheersDo.git",
+      },
+      {
+        name: "HRIS Toyota Buzz",
+        desc: "Manage all about human resources and print out.",
+        tech: [
+          "Java",
+          "Primafaces",
+          "Spring MVC",
+          "Crystal Reports",
+          "Oracle",
+        ],
+        demo: "",
+        code: "",
+      },
+      {
+        name: "YK (Yaowarat krungthep gold group) gold inventory&delivery",
+        desc: "Manages inventory and delivery gold&stuff to front shop 200+ branches in thailand.",
+        tech: ["VB.net", "MySQL", "Crystal Reports"],
+        demo: "",
+        code: "",
+      },
+      {
+        name: "Flexserv (WIP)",
+        desc: "Service platform concept that solve all problems for SME - in progress.",
+        tech: ["Next.js", "Node.js"],
+        demo: "",
+        code: "",
+      },
+    ]
+
+    const projectRefs = useRef<(HTMLDivElement | null)[]>([])
+
+    useEffect (() =>{
+      const observer = new IntersectionObserver(
+        (entries) =>{
+          entries.forEach((entry) =>{
+            if(entry.isIntersecting){
+              entry.target.classList.add('visible')
+            }
+          })
+        },
+        {threshold: 0.1} 
+      )
+      projectRefs.current.forEach((el) =>{
+        if(el) observer.observe(el)
+      })
+    return () =>{
+      projectRefs.current.forEach((el) =>{
+        if(el) observer.unobserve(el!)
+      })
+    }
+    }, [])
+
+    return <section id="projects" className="mx-auto max-w-6xl px-4 py-16 animate-fadeIn">
     <div className="flex items-end justify-between gap-4">
       <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
         Project
@@ -16,52 +85,12 @@ export default function Projects(){
     </div>
 
     <div className="mt-6 grid gap-5 md:grid-cols-2">
-      {[
-        {
-          name: "V-booking",
-          desc: "Vaccination booking with OTP.",
-          tech: ["Next.js", "Prisma", "OTP"],
-          demo: "",
-          code: "https://github.com/IXYOZ/vaccine-booking.git",
-        },
-        {
-          name: "CheersDo",
-          desc: "Priority-based to-do with points and E-mail reminders.",
-          tech: ["Next.js", "Prisma", "Tailwind", "8n8", "Docker"],
-          demo: "",
-          code: "https://github.com/IXYOZ/CheersDo.git",
-        },
-        {
-          name: "HRIS Toyota Buzz",
-          desc: "Manage all about human resources and print out.",
-          tech: [
-            "Java",
-            "Primafaces",
-            "Spring MVC",
-            "Crystal Reports",
-            "Oracle",
-          ],
-          demo: "",
-          code: "",
-        },
-        {
-          name: "YK (Yaowarat krungthep gold group) gold inventory&delivery",
-          desc: "Manages inventory and delivery gold&stuff to front shop 200+ branches in thailand.",
-          tech: ["VB.net", "MySQL", "Crystal Reports"],
-          demo: "",
-          code: "",
-        },
-        {
-          name: "Flexserv (WIP)",
-          desc: "Service platform concept that solve all problems for SME - in progress.",
-          tech: ["Next.js", "Node.js"],
-          demo: "",
-          code: "",
-        },
-      ].map((p) => (
+      {projects.map((p,i) => (
         <article
           key={p.name}
-          className="group rounded-2xl border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.05] p-5 shadow transition hover:translate-y-[-4px] hover:shadow-xl duration-300"
+          ref={(el) =>  {projectRefs.current[i] = el as HTMLDivElement | null}}
+          style={{animationDelay: `${i*2}s`}}
+          className="group rounded-2xl border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.05] p-5 shadow transition-transform duration-300 ease-out  hover:translate-y-1 hover:shadow-xl fade-in  "
         >
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-medium text-white/90">{p.name}</h3>

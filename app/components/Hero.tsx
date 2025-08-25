@@ -3,7 +3,7 @@
 import { motion } from "framer-motion" 
 
 export default function Hero(){
-    return  <section className="relative mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 pb-24 pt-16 text-center md:pt-24">
+    return  <section className="relative mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 pb-24 pt-16 text-center md:pt-24 animate-fadeIn">
     {/* {Glow} */}
     <div className="pointer-events-none absolute inset-0 -z-10 animate-pulse bg-[radial-gradient(50%_40%_at_50%_0%,rgba(99,102,241,0.25),transparent_70%)]" />
     <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/80">
@@ -23,7 +23,7 @@ export default function Hero(){
       </span>
     </motion.h1>
     <p className="max-w-2xl text-pretty text-sm/6 text-slate-300 md:text-base/7">
-      To solving problem I need to learn and do more.
+      To solving problem do it more and more.
     </p>
 
     <div className="flex flex-wrap items-center justify-center gap-3">
@@ -32,7 +32,7 @@ export default function Hero(){
         download
         className="rounded-2xl bg-white px-4 py-2 text-sm font-medium text-slate-900 shadow hover:shadow-lg"
       >
-        Download CV
+        📄 Download CV
       </a>
       <a
         href="#projects"

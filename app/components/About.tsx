@@ -1,7 +1,7 @@
 'use client'
 
 export default function About() {
-    return  <section id="about" className="mx-auto max-w-6xl px-4 py-16 text-center">
+    return  <section id="about" className="mx-auto max-w-6xl px-4 py-20 text-center animate-fadeIn">
       <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
         About
       </h2>
