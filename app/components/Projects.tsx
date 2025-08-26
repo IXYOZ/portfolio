@@ -9,7 +9,7 @@ export default function Projects(){
         name: "V-booking",
         desc: "Vaccination booking with OTP.",
         tech: ["Next.js", "Prisma", "OTP"],
-        demo: "",
+        demo: "https://v-booking-demo.vercel.app/",
         code: "https://github.com/IXYOZ/vaccine-booking.git",
       },
       {
